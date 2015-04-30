@@ -1,6 +1,6 @@
 package com.example.uni_bit.searchviewmap;
 
-import android.app.LoaderManager;
+
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.support.v4.app.LoaderManager.LoaderCallbacks;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
-
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.widget.SearchView;
@@ -24,7 +23,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 /**
  * Created by Uni-Bit on 29.04.2015.
  */
-public class MainActivity extends SherlockFragmentActivity implements LoaderCallbacks {
+public class MainActivity extends SherlockFragmentActivity implements LoaderCallbacks{
     GoogleMap mGoogleMap;
 
     @Override
@@ -32,8 +31,8 @@ public class MainActivity extends SherlockFragmentActivity implements LoaderCall
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        SupportMapFragment fragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
-        mGoogleMap = fragment.getMap();
+      SupportMapFragment fragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+         mGoogleMap = fragment.getMap();
         handleIntent(getIntent());
     }
 
